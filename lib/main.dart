@@ -1,0 +1,23 @@
+import 'package:flutter/material.dart';
+import 'pages/login_page.dart'; // Add this import
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
+      home: const LoginPage(), // Now this will work
+      debugShowCheckedModeBanner: false,
+    );
+  }
+}
