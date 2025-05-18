@@ -30,7 +30,6 @@ class _RegistrationPageState extends State<RegistrationPage> {
     if (_formKey.currentState!.validate()) {
       setState(() => _isLoading = true);
 
-      // Simulate network delay
       await Future.delayed(const Duration(seconds: 2));
 
       if (!mounted) return;

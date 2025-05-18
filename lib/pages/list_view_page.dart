@@ -6,12 +6,15 @@ class ListViewPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final items = List<Item>.generate(20, (index) => Item(
-      id: index + 1,
-      title: 'Item ${index + 1}',
-      description: 'Description for item ${index + 1}',
-      color: Colors.primaries[index % Colors.primaries.length],
-    ));
+    final items = List<Item>.generate(
+      20,
+      (index) => Item(
+        id: index + 1,
+        title: 'Item ${index + 1}',
+        description: 'Description for item ${index + 1}',
+        color: Colors.primaries[index % Colors.primaries.length],
+      ),
+    );
 
     return ListView.builder(
       itemCount: items.length,
@@ -42,19 +45,19 @@ class ListViewPage extends StatelessWidget {
             trailing: IconButton(
               icon: const Icon(Icons.chevron_right),
               onPressed: () {
-                // Show details
                 showDialog(
                   context: context,
-                  builder: (context) => AlertDialog(
-                    title: Text(item.title),
-                    content: Text(item.description),
-                    actions: [
-                      TextButton(
-                        onPressed: () => Navigator.pop(context),
-                        child: const Text('Close'),
+                  builder:
+                      (context) => AlertDialog(
+                        title: Text(item.title),
+                        content: Text(item.description),
+                        actions: [
+                          TextButton(
+                            onPressed: () => Navigator.pop(context),
+                            child: const Text('Close'),
+                          ),
+                        ],
                       ),
-                    ],
-                  ),
                 );
               },
             ),

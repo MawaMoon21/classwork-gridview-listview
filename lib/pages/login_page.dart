@@ -4,7 +4,6 @@ import 'home_page.dart';
 import '../widgets/custom_text_field.dart';
 
 class LoginPage extends StatefulWidget {
-  // Make sure this class exists
   const LoginPage({super.key});
 
   @override
@@ -28,7 +27,6 @@ class _LoginPageState extends State<LoginPage> {
     if (_formKey.currentState!.validate()) {
       setState(() => _isLoading = true);
 
-      // Simulate network delay
       await Future.delayed(const Duration(seconds: 2));
 
       if (!mounted) return;
