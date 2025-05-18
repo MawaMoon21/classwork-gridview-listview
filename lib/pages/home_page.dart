@@ -23,7 +23,6 @@ class _HomePageState extends State<HomePage> {
           IconButton(
             icon: const Icon(Icons.logout),
             onPressed: () {
-              // Implement logout functionality
               Navigator.pushReplacementNamed(context, '/login');
             },
           ),
